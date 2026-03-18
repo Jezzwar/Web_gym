@@ -1,0 +1,239 @@
+.section {
+  background: var(--black);
+  padding: 120px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Grid background pattern with fade-edges mask */
+.bgPattern {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.045) 1px, transparent 1px);
+  background-size: 48px 48px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+  pointer-events: none;
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 80px;
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── LEFT ── */
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 4.5vw, 64px);
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.accent { color: var(--gold); }
+
+/* ── Tabs ── */
+.tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.tab {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 28px 0;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  color: rgba(245,245,240,0.3);
+  transition: color 0.4s ease;
+}
+
+.tab:first-child { border-top: none; }
+.tabActive { color: var(--white); }
+
+.progressTrack {
+  position: absolute;
+  left: -24px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255,255,255,0.08);
+  overflow: hidden;
+}
+
+.progressBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--gold);
+  transform-origin: top;
+}
+
+.tabId {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  opacity: 0.4;
+  padding-top: 6px;
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.tabContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.tabTitle {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3vw, 44px);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  line-height: 1;
+  transition: color 0.4s ease;
+}
+
+.tabDesc {
+  font-size: 14px;
+  line-height: 1.75;
+  color: rgba(245,245,240,0.45);
+  max-width: 380px;
+  overflow: hidden;
+  padding-bottom: 4px;
+}
+
+/* ── RIGHT ── */
+.right {
+  position: sticky;
+  top: 120px;
+}
+
+.imageWrap {
+  position: relative;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+  border: 1px solid rgba(201,168,76,0.15);
+}
+
+.imageSlide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s ease;
+}
+
+.imageSlide:hover .img { transform: scale(1.03); }
+
+.imgOverlay {
+  position: absolute;
+  inset-x: 0;
+  bottom: 0;
+  height: 40%;
+  background: linear-gradient(to top, rgba(8,8,8,0.6), transparent);
+}
+
+.navBtns {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.navBtn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(8,8,8,0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(201,168,76,0.25);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.navBtn:hover {
+  background: rgba(201,168,76,0.15);
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.counter {
+  position: absolute;
+  bottom: 28px;
+  left: 28px;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  z-index: 10;
+}
+
+.counterActive {
+  font-family: var(--font-display);
+  font-size: 32px;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.counterTotal {
+  font-size: 12px;
+  color: rgba(245,245,240,0.35);
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 1024px) {
+  .inner { grid-template-columns: 1fr; gap: 48px; }
+  .right { position: static; }
+}
+
+@media (max-width: 640px) {
+  .section { padding: 80px 0; }
+  .inner { padding: 0 20px; }
+  .progressTrack { left: -16px; }
+}

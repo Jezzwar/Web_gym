@@ -1,0 +1,41 @@
+.wrap {
+  overflow: hidden;
+  border-top: 1px solid var(--black-border);
+  border-bottom: 1px solid var(--black-border);
+  background: var(--black);
+  padding: 18px 0;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+.track {
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  animation: marquee 60s linear infinite;
+  will-change: transform;
+}
+
+.brand {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--white-faint);
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 0 72px;
+}
+
+.brand::after {
+  content: '·';
+  color: var(--gold);
+  opacity: 0.4;
+  font-size: 18px;
+  padding-left: 72px;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}

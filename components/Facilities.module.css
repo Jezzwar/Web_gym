@@ -1,0 +1,160 @@
+.section {
+  background: var(--black);
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  -webkit-mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, black 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, black 40%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Header ── */
+.header {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 100px 40px 64px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(44px, 5.5vw, 80px);
+  line-height: 0.92;
+  letter-spacing: 0.01em;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.accent { color: var(--gold); }
+
+.subtitle {
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgba(245, 245, 240, 0.4);
+  max-width: 320px;
+  padding-bottom: 6px;
+}
+
+/* ── 2×2 Grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid rgba(201, 168, 76, 0.15);
+  border-left: 1px solid rgba(201, 168, 76, 0.15);
+}
+
+.cell {
+  position: relative;
+  padding: 52px 48px;
+  border-right: 1px solid rgba(201, 168, 76, 0.15);
+  border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  min-height: 300px;
+  transition: background 0.3s ease;
+  overflow: hidden;
+}
+
+.cell:hover { background: rgba(201, 168, 76, 0.025); }
+.cell:hover .cellBorderAccent { opacity: 1; }
+.cell:hover .cellNum { opacity: 1; }
+.cell:hover .cellIcon { color: var(--gold); }
+
+.cellBorderAccent {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.cellTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.cellNum {
+  font-family: var(--font-display);
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  opacity: 0.45;
+  transition: opacity 0.3s ease;
+}
+
+.cellIcon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(245, 245, 240, 0.22);
+  transition: color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.cellBody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+.cellTag {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.65;
+  background: rgba(201, 168, 76, 0.08);
+  padding: 4px 10px;
+  align-self: flex-start;
+}
+
+.cellTitle {
+  font-family: var(--font-display);
+  font-size: clamp(38px, 3.5vw, 56px);
+  line-height: 0.92;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.cellDesc {
+  font-size: 13px;
+  line-height: 1.75;
+  color: rgba(245, 245, 240, 0.4);
+  max-width: 400px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .header { flex-direction: column; align-items: flex-start; padding: 72px 20px 48px; gap: 24px; }
+  .grid { grid-template-columns: 1fr; }
+  .cell { min-height: 240px; padding: 40px 24px; }
+}
