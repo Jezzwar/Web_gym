@@ -73,7 +73,7 @@ export default function ProgramTabs() {
       {/* Grid bg pattern */}
       <div className={styles.bgPattern} />
 
-      <div className={styles.inner}>
+<div className={styles.inner}>
         {/* LEFT — tabs */}
         <div className={styles.left}>
           <div className={styles.heading}>
