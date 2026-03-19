@@ -538,9 +538,10 @@
   .spacer { display: none; }
   .workoutCard { display: none; }
   .wcIcon { display: none; }
-  .trainerCard { width: 90%; margin-left: auto; margin-right: auto; flex-direction: column; align-items: flex-start; gap: 10px; }
+  .trainerCard { width: 90%; margin-left: auto; margin-right: auto; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
   .trainerCard::before { display: none; }
-  .confirmBtn { margin-left: 0; margin-top: -10%; }
+  .trainerCard > div { margin-top: 5%; text-align: center; }
+  .confirmBtn { margin-left: 0; margin-top: -5%; }
   .statsInner { grid-template-columns: repeat(2, 1fr); }
   .statItem:nth-child(2) { border-right: none; }
   .statItem:nth-child(3) { border-top: 1px solid var(--black-border); }
