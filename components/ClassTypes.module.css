@@ -86,5 +86,12 @@
 }
 
 @media (max-width: 640px) {
+  .section { padding: 48px 0; }
+  .title { font-size: clamp(28px, 8vw, 40px); }
+  .right { min-height: 220px; }
+  .plateWrap { height: 220px; }
+}
+
+@media (max-width: 640px) {
   .section { padding: 64px 0; }
 }

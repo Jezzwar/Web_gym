@@ -158,3 +158,12 @@
   .grid { grid-template-columns: 1fr; }
   .cell { min-height: 240px; padding: 40px 24px; }
 }
+
+@media (max-width: 640px) {
+  .header { padding: 60px 16px 36px; }
+  .title { font-size: clamp(32px, 9vw, 48px); }
+  .subtitle { max-width: 100%; font-size: 13px; }
+  .cell { padding: 28px 20px; min-height: auto; }
+  .cellTitle { font-size: clamp(26px, 7vw, 38px); }
+  .cellDesc { max-width: 100%; }
+}

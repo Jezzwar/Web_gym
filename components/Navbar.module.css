@@ -130,6 +130,12 @@
 .burgerOpen span:nth-child(2) { opacity: 0; }
 .burgerOpen span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
+@media (max-width: 640px) {
+  .header { padding: 16px 20px; }
+  .header.scrolled { padding: 12px 20px; }
+  .logoText { font-size: 20px; }
+}
+
 @media (max-width: 900px) {
   .header { padding: 20px 24px; }
   .header.scrolled { padding: 14px 24px; }

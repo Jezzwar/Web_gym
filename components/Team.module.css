@@ -373,6 +373,10 @@
   .section { padding: 80px 0; }
   .inner { padding: 0 20px; gap: 40px; }
   .avatarRow { grid-template-columns: repeat(2, 1fr); }
-  .avatarBtn { padding: 32px 16px; }
-  .avatarRing { width: 80px; height: 80px; }
+  .avatarBtn { padding: 28px 12px; }
+  .avatarRing { width: 72px; height: 72px; }
+  .avatarName { font-size: 15px; }
+  .avatarRole { font-size: 9px; }
+  .storyInfo { padding: 20px 16px; }
+  .storyInfoDesc { font-size: 12px; }
 }

@@ -200,3 +200,13 @@
   .proofItem { padding: 28px 24px; border-top: 1px solid rgba(201,168,76,0.1); }
   .proofDivider { display: none; }
 }
+
+@media (max-width: 640px) {
+  .header { padding: 60px 16px 36px; }
+  .title { font-size: clamp(32px, 9vw, 48px); }
+  .subtitle { max-width: 100%; font-size: 13px; }
+  .cell { padding: 24px 16px; min-height: auto; }
+  .cellTitle { font-size: clamp(26px, 7vw, 38px); }
+  .proofItem { padding: 20px 16px; }
+  .proofNum { font-size: 36px; }
+}
