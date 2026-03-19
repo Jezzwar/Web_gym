@@ -264,14 +264,12 @@
 
 @media (max-width: 640px) {
   .section { padding: 60px 0; }
+  .info { display: none; }
   .formWrap { padding: 24px 16px; }
-  .formTitle { font-size: 22px; }
+  .formTitle { font-size: 20px; }
   .formSub { font-size: 12px; }
   .input { padding: 11px 12px; font-size: 13px; }
   .textarea { min-height: 90px; }
   .submit { padding: 14px; font-size: 13px; }
   .form { gap: 14px; }
-  .detailItem { padding: 12px 14px; }
-  .title { font-size: clamp(32px, 9vw, 48px); }
-  .desc { font-size: 13px; }
 }
