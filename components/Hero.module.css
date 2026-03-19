@@ -532,16 +532,28 @@
 }
 
 @media (max-width: 768px) {
-  .headlineWrap { padding: 180px 20px 40px; align-items: flex-start; }
+  .headlineWrap { padding: 180px 20px 40px; align-items: center; text-align: center; }
   .headline { font-size: clamp(40px, 10vw, 64px); }
-  .bottomRow { flex-direction: column; align-items: stretch; padding-bottom: 32px; }
+  .bottomRow { flex-direction: column; align-items: center; padding-bottom: 32px; }
   .spacer { display: none; }
   .workoutCard { display: none; }
   .wcIcon { display: none; }
-  .trainerCard { width: 90%; margin-left: auto; margin-right: auto; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
+  .trainerCard { width: auto; margin: 0; flex-direction: column; align-items: center; gap: 10px; text-align: center; background: transparent; border-color: transparent; backdrop-filter: none; padding: 0; }
   .trainerCard::before { display: none; }
   .trainerCard > div { margin-top: 5%; text-align: center; }
-  .confirmBtn { margin-left: 0; margin-top: -5%; }
+  .confirmBtn { margin-left: 0; margin-top: 0; width: auto; padding: 10px 20px; }
+  .bookingPanel { position: fixed; inset: 0; margin: auto; top: 45%; left: 0; right: 0; bottom: 0; height: fit-content; width: fit-content; min-width: 0; padding: 14px 14px 12px; background: transparent; border: none; backdrop-filter: none; z-index: 999; display: flex; flex-direction: column; align-items: center; }
+  .bookingPanel::before { display: none; }
+  .panelHeader { width: 100%; justify-content: center; position: relative; }
+  .panelClose { background: none; border: none; position: absolute; right: 0; top: 50%; transform: translateY(-50%); }
+  .panelAvatars { justify-content: center; }
+  .panelConfirmBtn { width: 100%; }
+  .panelLabel { font-size: 8px; }
+  .panelAvatars { gap: 8px; margin-bottom: 10px; }
+  .panelAvatarRing { width: 40px; height: 40px; }
+  .panelAvatarName { font-size: 9px; }
+  .panelConfirmBtn { font-size: 9px; padding: 8px 0; background: none; border: none; text-decoration: underline; }
+  .panelConfirmBtnActive { background: none; border: none; color: var(--gold); text-decoration: underline; }
   .statsInner { grid-template-columns: repeat(2, 1fr); }
   .statItem:nth-child(2) { border-right: none; }
   .statItem:nth-child(3) { border-top: 1px solid var(--black-border); }

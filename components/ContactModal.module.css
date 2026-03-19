@@ -22,7 +22,7 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 900px;
+  max-width: 1100px;
   background: var(--black);
   border: 1px solid rgba(201, 168, 76, 0.18);
   display: grid;
@@ -241,9 +241,12 @@
 @media (max-width: 680px) {
   .modal { grid-template-columns: 1fr; }
   .left {
-    padding: 40px 28px 28px;
+    padding: 24px 24px 0;
     border-right: none;
-    border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+    gap: 0;
   }
-  .right { padding: 28px 28px 40px; }
+  .desc { margin-bottom: 3%; font-size: 11px; line-height: 1.5; }
+  .title { display: none; }
+  .contactList { display: none; }
+  .right { padding: 16px 24px 32px; }
 }
