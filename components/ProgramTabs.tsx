@@ -24,12 +24,6 @@ const PROGRAMS = [
     description: 'Martial arts-inspired conditioning combining boxing fundamentals, MMA drills, and reactive agility work for a full-body transformation.',
     image: 'https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=1200&q=85&fit=crop',
   },
-  {
-    id: '04',
-    title: 'Yoga & Recovery',
-    description: 'Dynamic flows and restorative postures to improve flexibility, mobility, and mental clarity — the foundation of elite performance.',
-    image: 'https://images.unsplash.com/photo-1588286840104-8957b019727f?w=1200&q=85&fit=crop',
-  },
 ]
 
 const AUTO_PLAY = 5000
