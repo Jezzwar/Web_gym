@@ -532,7 +532,7 @@
 }
 
 @media (max-width: 768px) {
-  .headlineWrap { padding: 180px 20px 40px; align-items: center; text-align: center; }
+  .headlineWrap { padding: 100px 20px 40px; align-items: center; text-align: center; }
   .headline { font-size: clamp(40px, 10vw, 64px); }
   .bottomRow { flex-direction: column; align-items: center; padding-bottom: 32px; }
   .spacer { display: none; }
