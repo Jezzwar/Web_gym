@@ -234,12 +234,12 @@
 
 @media (max-width: 640px) {
   .section { padding: 80px 0; }
-  .inner { padding: 0 20px; gap: 32px; }
+  .inner { padding: 0 20px; gap: 32px; grid-template-columns: 1fr; }
   .left { gap: 28px; }
   .title { font-size: clamp(32px, 9vw, 48px); }
   .progressTrack { display: none; }
   .tab { padding: 20px 0; gap: 14px; }
   .tabTitle { font-size: clamp(22px, 6vw, 32px); }
   .tabDesc { font-size: 13px; }
-  .imageWrap { aspect-ratio: 4 / 3; }
+  .right { display: none; }
 }
