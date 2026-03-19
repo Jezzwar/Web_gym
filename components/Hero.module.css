@@ -532,7 +532,7 @@
 }
 
 @media (max-width: 768px) {
-  .headlineWrap { padding: 140px 20px 40px; }
+  .headlineWrap { padding: 100px 20px 40px; align-items: flex-start; }
   .headline { font-size: clamp(40px, 10vw, 64px); }
   .bottomRow { flex-direction: column; align-items: stretch; padding-bottom: 32px; }
   .spacer { display: none; }
@@ -540,7 +540,7 @@
   .wcIcon { display: none; }
   .trainerCard { width: 90%; margin-left: auto; margin-right: auto; flex-direction: column; align-items: flex-start; gap: 10px; }
   .trainerCard::before { display: none; }
-  .confirmBtn { margin-left: 0; padding: 7px 12px; font-size: 10px; }
+  .confirmBtn { margin-left: 0; margin-top: -10%; }
   .statsInner { grid-template-columns: repeat(2, 1fr); }
   .statItem:nth-child(2) { border-right: none; }
   .statItem:nth-child(3) { border-top: 1px solid var(--black-border); }
