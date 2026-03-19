@@ -532,12 +532,13 @@
 }
 
 @media (max-width: 768px) {
-  .headlineWrap { padding: 100px 20px 40px; align-items: center; text-align: center; }
+  .headlineWrap { padding: 84px 20px 40px; align-items: center; text-align: center; }
   .headline { font-size: clamp(40px, 10vw, 64px); }
-  .bottomRow { flex-direction: column; align-items: center; padding-bottom: 32px; }
+  .bottomRow { flex-direction: column; align-items: center; padding-bottom: 28px; }
   .spacer { display: none; }
   .workoutCard { display: none; }
   .wcIcon { display: none; }
+  .trainerWrap { margin-left: 0; display: flex; flex-direction: column; align-items: center; }
   .trainerCard { width: auto; margin: 0; flex-direction: column; align-items: center; gap: 10px; text-align: center; background: transparent; border-color: transparent; backdrop-filter: none; padding: 0; }
   .trainerCard::before { display: none; }
   .trainerCard > div { margin-top: 5%; text-align: center; }
