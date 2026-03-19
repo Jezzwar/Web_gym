@@ -536,7 +536,7 @@
   .headline { font-size: clamp(40px, 10vw, 64px); }
   .bottomRow { flex-direction: column; align-items: stretch; padding-bottom: 32px; }
   .spacer { display: none; }
-  .workoutCard { max-width: 100%; }
+  .workoutCard { display: none; }
   .wcIcon { display: none; }
   .trainerCard { width: 90%; margin-left: auto; margin-right: auto; }
   .statsInner { grid-template-columns: repeat(2, 1fr); }
