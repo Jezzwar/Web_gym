@@ -263,13 +263,16 @@
 }
 
 @media (max-width: 640px) {
-  .section { padding: 60px 0; }
+  .section { padding: 48px 0; }
   .info { display: none; }
-  .formWrap { padding: 24px 16px; }
-  .formTitle { font-size: 20px; }
-  .formSub { font-size: 12px; }
-  .input { padding: 11px 12px; font-size: 13px; }
-  .textarea { min-height: 90px; }
-  .submit { padding: 14px; font-size: 13px; }
-  .form { gap: 14px; }
+  .formWrap { padding: 20px 16px; }
+  .formHeader { margin-bottom: 4px; }
+  .formTitle { font-size: 18px; }
+  .formSub { font-size: 11px; }
+  .form { gap: 10px; }
+  .input { padding: 10px 12px; font-size: 13px; }
+  .textarea { min-height: 60px; }
+  .submit { padding: 13px; font-size: 12px; }
+  .privacy { font-size: 10px; }
+  .label { font-size: 10px; }
 }
