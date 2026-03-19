@@ -361,7 +361,14 @@
 @media (max-width: 640px) {
   .section { padding: 72px 0; }
   .inner { padding: 0 20px; }
-  .card { padding: 32px 24px 24px; }
+  .left { align-items: center; text-align: center; }
+  .title { font-size: clamp(40px, 11vw, 64px); }
+  .subtitle { text-align: center; }
+  .toggle { align-self: center; }
+  .card { padding: 32px 24px 24px; text-align: center; }
+  .cardTop { align-items: center; }
+  .priceRow { justify-content: center; }
+  .features { align-items: flex-start; width: 100%; }
   .priceAmount { font-size: 52px; }
   .planName { font-size: 26px; }
 }
