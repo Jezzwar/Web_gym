@@ -361,9 +361,9 @@
 @media (max-width: 640px) {
   .section { padding: 60px 0; overflow: hidden; }
   .inner { padding: 0 16px; gap: 28px; max-width: 100%; }
-  .left { align-items: center; text-align: center; gap: 16px; }
+  .left { align-items: flex-start; text-align: left; gap: 16px; }
   .title { font-size: clamp(26px, 8vw, 40px); line-height: 1; }
-  .subtitle { font-size: 12px; line-height: 1.6; text-align: center; padding: 0 8px; }
+  .subtitle { font-size: 12px; line-height: 1.6; text-align: left; padding: 0; }
   .toggle { align-self: stretch; width: 100%; box-sizing: border-box; }
   .toggleBtn { padding: 10px 8px; font-size: 10px; flex: 1; justify-content: center; white-space: nowrap; }
   .saveBadge { font-size: 9px; }
