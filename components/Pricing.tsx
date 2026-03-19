@@ -3,6 +3,7 @@
 import { useState, useRef, useContext, createContext, useEffect } from 'react'
 import { motion, useSpring, useMotionValue, useTransform } from 'framer-motion'
 import { Check, Star, ChevronLeft, ChevronRight } from 'lucide-react'
+import Image from 'next/image'
 import NumberFlow from '@number-flow/react'
 import confetti from 'canvas-confetti'
 import styles from './Pricing.module.css'
@@ -332,7 +333,7 @@ export default function Pricing() {
               <span className={styles.accent}>Your Performance</span>
             </h2>
             <p className={styles.subtitle}>
-              Choose the plan that matches your ambition. All memberships include no joining fee and a 7-day free trial.
+              Choose the plan that matches your ambition.<br />All memberships include no joining fee and a 7-day free trial.
             </p>
             <Toggle />
           </div>
