@@ -190,3 +190,5 @@ ul { list-style: none; }
   opacity: 1;
   transform: translateX(0);
 }
+
+@media (max-width: 768px) { .card-icon-box { display: none !important; } }

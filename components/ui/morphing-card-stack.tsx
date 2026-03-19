@@ -130,7 +130,7 @@ export function MorphingCardStack({
                 >
                   <div style={{ display: 'flex', alignItems: 'flex-start', gap: 14 }}>
                     {card.icon && (
-                      <div style={{
+                      <div className="card-icon-box" style={{
                         width: 52, height: 52,
                         background: 'var(--gold-dim)',
                         borderRadius: 10,
