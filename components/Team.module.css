@@ -145,8 +145,8 @@
 .storyCard {
   position: relative;
   z-index: 1;
-  width: min(420px, 94vw);
-  height: min(88vh, 780px);
+  width: min(336px, 75vw);
+  height: min(70vh, 624px);
   overflow: hidden;
   border: 1px solid rgba(201,168,76,0.15);
   background: #080808;
