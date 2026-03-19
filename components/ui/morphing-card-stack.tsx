@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, type ReactNode } from "react"
+import { useState, useEffect, type ReactNode } from "react"
 import { motion, AnimatePresence, LayoutGroup, type PanInfo } from "framer-motion"
 
 export type LayoutMode = "stack" | "list"
@@ -30,6 +30,15 @@ export function MorphingCardStack({
   const [expandedCard, setExpandedCard] = useState<string | null>(null)
   const [activeIndex, setActiveIndex] = useState(0)
   const [isDragging, setIsDragging] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 768px)')
+    setIsMobile(mq.matches)
+    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches)
+    mq.addEventListener('change', handler)
+    return () => mq.removeEventListener('change', handler)
+  }, [])
 
   if (!cards || cards.length === 0) return null
 
@@ -129,8 +138,8 @@ export function MorphingCardStack({
                   }}
                 >
                   <div style={{ display: 'flex', alignItems: 'flex-start', gap: 14 }}>
-                    {card.icon && (
-                      <div className="card-icon-box" style={{
+                    {card.icon && !isMobile && (
+                      <div style={{
                         width: 52, height: 52,
                         background: 'var(--gold-dim)',
                         borderRadius: 10,
