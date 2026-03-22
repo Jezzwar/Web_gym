@@ -28,8 +28,8 @@ const trainers = [
     cert: 'RYT-500',
     exp: '8 years experience',
     description: 'Certified in Vinyasa and Yin yoga, Sofia brings a holistic approach that balances strength with recovery and mental clarity.',
-    img: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=1200&q=85&fit=crop&crop=face,top',
-    thumb: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=200&q=80&fit=crop&crop=face,top',
+    img: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1200&q=85&fit=crop&crop=face,top',
+    thumb: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=200&q=80&fit=crop&crop=face,top',
   },
   {
     id: '03',
@@ -39,8 +39,8 @@ const trainers = [
     cert: 'ACE-CPT',
     exp: '10 years experience',
     description: 'MMA background with a passion for transformative high-intensity training. Marcus pushes every client beyond what they thought possible.',
-    img: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&q=85&fit=crop&crop=face,top',
-    thumb: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=200&q=80&fit=crop&crop=face,top',
+    img: 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=1200&q=85&fit=crop&crop=face,top',
+    thumb: 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=200&q=80&fit=crop&crop=face,top',
   },
   {
     id: '04',

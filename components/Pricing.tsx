@@ -202,8 +202,7 @@ function Carousel() {
   const DRAG_THRESHOLD = 60
 
   const goTo = (i: number) => {
-    const clamped = Math.max(0, Math.min(plans.length - 1, i))
-    setCurrent(clamped)
+    setCurrent(((i % plans.length) + plans.length) % plans.length)
   }
 
   // Sync x to current index
@@ -297,7 +296,7 @@ function Carousel() {
 
       {/* Nav */}
       <div className={styles.carouselNav}>
-        <button className={styles.navBtn} onClick={() => goTo(current - 1)} disabled={current === 0}>
+        <button className={styles.navBtn} onClick={() => goTo(current - 1)}>
           <ChevronLeft size={18} />
         </button>
         <div className={styles.dots}>
@@ -305,7 +304,7 @@ function Carousel() {
             <button key={i} className={`${styles.dot} ${i === current ? styles.dotActive : ''}`} onClick={() => goTo(i)} />
           ))}
         </div>
-        <button className={styles.navBtn} onClick={() => goTo(current + 1)} disabled={current === plans.length - 1}>
+        <button className={styles.navBtn} onClick={() => goTo(current + 1)}>
           <ChevronRight size={18} />
         </button>
       </div>

@@ -90,6 +90,8 @@
   font-size: 13px;
   line-height: 1.75;
   color: var(--white-dim);
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
 
 .desc strong {

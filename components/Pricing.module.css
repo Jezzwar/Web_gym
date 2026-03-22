@@ -120,6 +120,7 @@
 .carouselClipper {
   overflow: hidden;
   border: 1px solid rgba(201,168,76,0.12);
+  margin: 0 6%;
 }
 
 .carouselViewport {
@@ -209,7 +210,7 @@
 
 .priceAmount {
   font-family: var(--font-display);
-  font-size: 72px;
+  font-size: 92px;
   color: var(--white);
   line-height: 0.88;
   letter-spacing: -0.01em;
@@ -374,7 +375,7 @@
   .cardTop { align-items: center; }
   .priceRow { justify-content: center; }
   .features { align-items: flex-start; width: 100%; }
-  .priceAmount { font-size: 44px; }
+  .priceAmount { font-size: 60px; }
   .planName { font-size: 22px; }
   .planDesc { font-size: 12px; }
   .feature { font-size: 12px; }
